@@ -4,7 +4,7 @@
 
   /* GET home page. */
   router.get('/', function (req, res) {
-    res.render('index', {title: 'СК Сапсан - рукопашний бій у Чечельницькому ройоні'});
+    res.render('index', {title: 'СК Сапсан - рукопашний бій у Чечельницькому районі'});
   });
 
   module.exports = router;

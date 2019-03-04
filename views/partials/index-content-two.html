@@ -1,0 +1,454 @@
+<style>
+
+  body {
+    /*font-family: Arial Black, Gadget, sans-serif;*/
+    font-family: Verdana, Geneva, sans-serif;
+    color: #3e3d3d;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .vertical-center {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .animate {
+    transition: 0.4s;
+  }
+
+  header {
+    width: 60%;
+  }
+
+  header.collapsed {
+    width: 45%;
+  }
+
+  .menu {
+    padding-top: 10px;
+  }
+
+  .menu .link {
+    display: inline-block;
+    width: 18%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .menu .link span {
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .menu .link a:hover {
+    text-decoration: none;
+  }
+
+  .main {
+    height: 100vh;
+    background: url('/img/dd.jpg') center center;
+  }
+
+  .main.collapsed {
+    height: 80px;
+  }
+
+  .logo {
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  .logo.collapsed {
+    width: 80px;
+    top: 41px;
+    left: 51%;
+  }
+
+  .main-title {
+    left: 20%;
+    color: #fff;
+    font-size: 75px;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .main-description {
+    left: 50%;
+    margin-left: 150px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 35px;
+    opacity: 1;
+  }
+
+  .main-description.collapsed,
+  .main-title.collapsed {
+    top: 10%;
+    opacity: 0;
+    color: #fff;
+  }
+
+  .margin-top-m {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .article-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .article-description {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  /*slider*/
+
+  .slider-container {
+    padding: 10px;
+    /*border: 5px #ece9e9 solid;*/
+    /*border-radius: 7px;*/
+    /*box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);*/
+    /*background-color: #ece9e9;*/
+  }
+
+  .slider-container ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .slider-container li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor: pointer;
+  }
+
+  .slider-container img {
+    display: block;
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+</style>
+
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.3/css/lightslider.min.css"/>
+
+
+<div class="main animate">
+  <header class="animate">
+    <div class="menu">
+      <div class="link">
+        <span href="" id="home">Головна</span>
+      </div>
+      <div class="link">
+        <span href="">Новини</span>
+      </div>
+      <div class="link">
+        <span href="">Тренер</span>
+      </div>
+      <div class="link">
+        <span href="">Фото</span>
+      </div>
+      <div class="link">
+        <span href="">Контакти</span>
+      </div>
+    </div>
+  </header>
+  <div class="left">
+    <div class="main-title animate absolute-center">СК САПСАН</div>
+  </div>
+  <div class="right">
+    <div class="main-description animate vertical-center">
+      Спортивний клуб "САПСАН" створений з метою сприяння розвитку рукопашного бою та східних видів двобою у
+      Чечельнику, Вінницької області
+    </div>
+  </div>
+  <img class="logo animate absolute-center" src="/img/sf.png" alt="">
+</div>
+
+<section hidden id="news1">
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/29101763_587836171567287_6099652682744277499_n.jpg?_nc_cat=0&oh=431425069c8e8ab2809f0ce72f59dc1a&oe=5B6E42C2">
+                <img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/29101763_587836171567287_6099652682744277499_n.jpg?_nc_cat=0&oh=431425069c8e8ab2809f0ce72f59dc1a&oe=5B6E42C2"/>
+              </li>
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28958697_587836251567279_718579156423932160_n.jpg?_nc_cat=0&oh=68fb879f9ec4e6205e599c43c39e57b7&oe=5B50B52D">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28958697_587836251567279_718579156423932160_n.jpg?_nc_cat=0&oh=68fb879f9ec4e6205e599c43c39e57b7&oe=5B50B52D"/>
+              </li>
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/29063093_587836318233939_7864790003262380343_n.jpg?_nc_cat=0&oh=2d7efe0847fe5b2bb3363175dc38a9b2&oe=5B6B8796">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/29063093_587836318233939_7864790003262380343_n.jpg?_nc_cat=0&oh=2d7efe0847fe5b2bb3363175dc38a9b2&oe=5B6B8796"/>
+              </li>
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28795037_587836418233929_3806599467663865585_n.jpg?_nc_cat=0&oh=f4e3fbfc82e1ef057512efa4d8c13afa&oe=5B5D7F89">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28795037_587836418233929_3806599467663865585_n.jpg?_nc_cat=0&oh=f4e3fbfc82e1ef057512efa4d8c13afa&oe=5B5D7F89"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="article-title">Чемпіонат (10 Березня)</div>
+          <div class="article-description">
+            Відкритий чемпіонат Чернівецької області з рукопашного бою.
+            <br>
+            До золота дотягнув лише Рубан Антон , але було кілька чудових больових 👍
+            <br>
+            5 срібних - Чернега Артем, Барабаш Кіріл, Панасюк Андрій, Лавренюк Руслан, Шиян Артур
+            <br>
+            4 бронзи - Гаврилюк Олександр, Хлівний Антон, Косаківський Рома, Маслюк Артем.
+            <br>
+            І кубок за кращу борцівську техніку отримав Барабаш Влад виконавши швидкий і якісний больовий 👌
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="article-title">Результати Чемпіонату (24 Лютого)</div>
+          <div class="article-description">
+            Успішно пройшов сьогоднішній день.. завершився Чемпіонат України серед школярів з рукопашного бою, з шести
+            учасників 5 медалей :
+            <br>
+            Золото - Рубан Антон та Соловей Олександр 💪
+            <br>
+            Срібло - Барановський Владислав 💪
+            <br>
+            Бронза - Барабаш Кіріл та Панасюк Андрій 💪
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28279626_580480215636216_2508663081055847998_n.jpg?_nc_cat=0&oh=d04871f208ee95021c89b8d6d84d63fb&oe=5B55EDAF">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28279626_580480215636216_2508663081055847998_n.jpg?_nc_cat=0&oh=d04871f208ee95021c89b8d6d84d63fb&oe=5B55EDAF"/>
+              </li>
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28168647_580480318969539_7044541482321063789_n.jpg?_nc_cat=0&oh=211a5ed8eb8cd7d04dc94178d4a2cce1&oe=5B5D8AE4">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28168647_580480318969539_7044541482321063789_n.jpg?_nc_cat=0&oh=211a5ed8eb8cd7d04dc94178d4a2cce1&oe=5B5D8AE4"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25507911_547968925554012_7252949357299101953_n.jpg?_nc_cat=0&oh=272262074acbb086f7b138cfc6433c1d&oe=5B514287">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25507911_547968925554012_7252949357299101953_n.jpg?_nc_cat=0&oh=272262074acbb086f7b138cfc6433c1d&oe=5B514287"/>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="article-description">
+            Тримаємо кулаки за наших воїнів, саме зараз Чернега Артьом і Баранюк Андрій беруть участь в турнірі з боксу
+            (ск "Нокаут", м. Вінниця)
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="article-description">
+            В нас в гостях заслужений майстер спорту з боротьби самбо, чемпіон світу Васильчук Іван.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25398782_1952263041680235_2319939682062945806_n.jpg?_nc_cat=0&oh=584911a6711b80c027290b26bae9c661&oe=5B621C62">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25398782_1952263041680235_2319939682062945806_n.jpg?_nc_cat=0&oh=584911a6711b80c027290b26bae9c661&oe=5B621C62"/>
+              </li>
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25398889_1952263045013568_3606222066314193440_n.jpg?_nc_cat=0&oh=7b7c0e97ca860e803eea96499f2348b7&oe=5B50CD58">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/25398889_1952263045013568_3606222066314193440_n.jpg?_nc_cat=0&oh=7b7c0e97ca860e803eea96499f2348b7&oe=5B50CD58"/>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/24068238_539034726447432_8859946596397614272_n.jpg?_nc_cat=0&oh=7a6e5bfbc7587d2cc37d1b6aac7159f9&oe=5B70C25C">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/24068238_539034726447432_8859946596397614272_n.jpg?_nc_cat=0&oh=7a6e5bfbc7587d2cc37d1b6aac7159f9&oe=5B70C25C"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="article-title">
+            2 місце Кубока Львова Панкратіона
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="news2">
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="slider-container">
+          <ul class="slider">
+            <li data-thumb="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/29101763_587836171567287_6099652682744277499_n.jpg?_nc_cat=0&oh=431425069c8e8ab2809f0ce72f59dc1a&oe=5B6E42C2">
+              <img src="https://scontent-ams3-1.xx.fbcdn.net/v/t1.0-9/29101763_587836171567287_6099652682744277499_n.jpg?_nc_cat=0&oh=431425069c8e8ab2809f0ce72f59dc1a&oe=5B6E42C2"/>
+            </li>
+            <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28958697_587836251567279_718579156423932160_n.jpg?_nc_cat=0&oh=68fb879f9ec4e6205e599c43c39e57b7&oe=5B50B52D">
+              <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28958697_587836251567279_718579156423932160_n.jpg?_nc_cat=0&oh=68fb879f9ec4e6205e599c43c39e57b7&oe=5B50B52D"/>
+            </li>
+            <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/29063093_587836318233939_7864790003262380343_n.jpg?_nc_cat=0&oh=2d7efe0847fe5b2bb3363175dc38a9b2&oe=5B6B8796">
+              <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/29063093_587836318233939_7864790003262380343_n.jpg?_nc_cat=0&oh=2d7efe0847fe5b2bb3363175dc38a9b2&oe=5B6B8796"/>
+            </li>
+            <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28795037_587836418233929_3806599467663865585_n.jpg?_nc_cat=0&oh=f4e3fbfc82e1ef057512efa4d8c13afa&oe=5B5D7F89">
+              <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/28795037_587836418233929_3806599467663865585_n.jpg?_nc_cat=0&oh=f4e3fbfc82e1ef057512efa4d8c13afa&oe=5B5D7F89"/>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="article-description">
+          Відкритий чемпіонат Чернівецької області з рукопашного бою.
+          <br>
+          До золота дотягнув лише Рубан Антон , але було кілька чудових больових 👍
+          <br>
+          5 срібних - Чернега Артем, Барабаш Кіріл, Панасюк Андрій, Лавренюк Руслан, Шиян Артур
+          <br>
+          4 бронзи - Гаврилюк Олександр, Хлівний Антон, Косаківський Рома, Маслюк Артем.
+          <br>
+          І кубок за кращу борцівську техніку отримав Барабаш Влад виконавши швидкий і якісний больовий 👌
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <hr>
+  </div>
+  <div class="container margin-top-m">
+    <div class="row">
+      <div class="col-lg-6">
+        <div>
+          <div class="slider-container">
+            <ul class="slider">
+              <li data-thumb="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/24068238_539034726447432_8859946596397614272_n.jpg?_nc_cat=0&oh=7a6e5bfbc7587d2cc37d1b6aac7159f9&oe=5B70C25C">
+                <img src="https://scontent.fhen1-1.fna.fbcdn.net/v/t1.0-9/24068238_539034726447432_8859946596397614272_n.jpg?_nc_cat=0&oh=7a6e5bfbc7587d2cc37d1b6aac7159f9&oe=5B70C25C"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div>
+          <div class="article-title">
+            2 місце Кубока Львова Панкратіона
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.3/js/lightslider.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $('.menu .link span').click(function () {
+      $('header').addClass('collapsed');
+      $('.main').addClass('collapsed');
+      $('.logo').addClass('collapsed');
+      $('.main-title').addClass('collapsed');
+      $('.main-description').addClass('collapsed');
+    });
+
+    $('#home').click(function () {
+      $('header').removeClass('collapsed');
+      $('.main').removeClass('collapsed');
+      $('.logo').removeClass('collapsed');
+      $('.main-title').removeClass('collapsed');
+      $('.main-description').removeClass('collapsed');
+    });
+
+//    $('.menu .link span').click();
+
+    $('.slider').lightSlider({
+      gallery: true,
+      item: 1,
+      loop: true,
+      slideMargin: 0,
+      thumbItem: 7,
+      vThumbWidth: 200
+    });
+  });
+</script>

@@ -1,0 +1,256 @@
+<style>
+
+  body {
+    /*font-family: Arial Black, Gadget, sans-serif;*/
+    font-family: Verdana, Geneva, sans-serif;
+    color: #fff;
+  }
+
+  .relative {
+    position: relative;
+  }
+
+  .absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  .vertical-center {
+    position: absolute;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .animate {
+    transition: 0.4s;
+  }
+
+  header {
+    display: none;
+    position: relative;
+    width: 40%;
+    z-index: 999;
+  }
+
+  .menu {
+    padding-top: 10px;
+  }
+
+  .menu .link {
+    display: inline-block;
+    width: 18%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu .link span {
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .menu .link a:hover {
+    text-decoration: none;
+  }
+
+  .main {
+    height: 100vh;
+    
+    /* background: url('/img/dima_full.jpg') no-repeat center center; */
+  }
+
+  .main.collapsed {
+    height: 80px;
+  }
+
+  .main .left-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    /*background: #3a289e;*/
+  }
+
+  .main .right-container {
+    position: absolute;
+    left: 35%;
+    top: 0;
+    right: 0;
+    bottom: 0;  
+  }
+
+  .logo {
+    width: 400px;
+    border-radius: 50%;
+    left: 50%;
+  }
+
+  .logo.collapsed {
+    width: 80px;
+    top: 41px;
+    left: 51%;
+  }
+
+  .main-title {
+    top: 9%;
+    font-size: 50px;
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .main-description {
+    left: 50%;
+    margin-left: 150px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 35px;
+    opacity: 1;
+  }
+
+  /*.main-description::after {*/
+  /*display: block;*/
+  /*position: relative;*/
+  /*background-image: linear-gradient(rgba(251,225,0, 0) 0, #fbe100 100%);*/
+  /*margin-top: -50px;*/
+  /*height: 50px;*/
+  /*width: 100%;*/
+  /*content: '';*/
+  /*}*/
+
+  .top-gradient {
+    position: absolute;
+    background-image: linear-gradient(rgba(251, 225, 0, 0) 0, #fbe100 87%);
+    height: 55px;
+    width: 100%;
+    top: 0;
+    transform: rotate(180deg);
+  }
+
+  .right-gradient {
+    position: absolute;
+    background-image: linear-gradient(rgba(251, 225, 0, 0) 0, #fbe100 87%);
+    height: 51px;
+    width: 130%;
+    top: 0;
+    transform: rotate(270deg);
+    right: -236px;
+    bottom: 0;
+  }
+
+  .bottom-gradient {
+    position: absolute;
+    background-image: linear-gradient(rgba(251, 225, 0, 0) 0, #fbe100 100%);
+    margin-top: -50px;
+    height: 50px;
+    width: 100%;
+  }
+
+  .main-description.collapsed,
+  .main-title.collapsed {
+    top: 10%;
+    opacity: 0;
+  }
+
+  .margin-top-m {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .article-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+  }
+
+  .article-description {
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  /*slider*/
+
+  /*.slider-container {*/
+  /*padding: 10px;*/
+  /*!*border: 5px #ece9e9 solid;*!*/
+  /*!*border-radius: 7px;*!*/
+  /*!*box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.3);*!*/
+  /*!*background-color: #ece9e9;*!*/
+  /*}*/
+
+  /*.slider-container ul {*/
+  /*list-style: none outside none;*/
+  /*padding-left: 0;*/
+  /*margin-bottom: 0;*/
+  /*}*/
+
+  /*.slider-container li {*/
+  /*display: block;*/
+  /*float: left;*/
+  /*margin-right: 6px;*/
+  /*cursor: pointer;*/
+  /*}*/
+
+  /*.slider-container img {*/
+  /*display: block;*/
+  /*height: auto;*/
+  /*width: 100%;*/
+  /*max-width: 100%;*/
+  /*}*/
+
+</style>
+
+<link type="text/css" rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.3/css/lightslider.min.css"/>
+
+<div class="main animate">
+  <header class="animate">
+    <div class="menu">
+      <div class="link">
+        <span href="" id="home">Головна</span>
+      </div>
+      <div class="link">
+        <span href="">Новини</span>
+      </div>
+      <div class="link">
+        <span href="">Тренер</span>
+      </div>
+      <div class="link">
+        <span href="">Фото</span>
+      </div>
+      <div class="link">
+        <span href="">Контакти</span>
+      </div>
+    </div>
+  </header>
+  <div style="height: 50vh;     filter: blur(3px); background: url(/img/dima_full.jpg) no-repeat center center; background-size: cover; position: absolute; top:0; left: 0; right: 0"></div>
+  <div style="height: 50vh; background: blue; opacity: 0.7"></div>
+<div style="height: 5px; background: fff;"></div>
+  <div style="height: 50vh;     filter: blur(3px); background: url(/img/qRuHMjhOi8E.jpg) no-repeat top center; background-size: cover; position: absolute; bottm:0; left: 0; right: 0"></div>
+  <div style="height: 50vh; background: #fbe100; opacity: 0.7"></div>
+  <div class="main-title animate absolute-center">СК САПСАН</div>
+
+  <div class="right">
+    <div class="main-description animate vertical-center">
+      <!--Спортивний клуб "САПСАН" створений з метою сприяння розвитку рукопашного бою та східних видів двобою у-->
+      <!--Чечельнику, Вінницької області-->
+      <!-- <img style="width: 400px;" src="/img/dima.jpg" alt=""> -->
+    </div>
+    <img class="absolute-center" style="width: 210px; left: 10%" src="/img/judo_tr_h_b.png" alt="">
+    <img class="absolute-center" style="width: 210px; left: 83%; transform: scaleX(-1); top: 24%;" src="/img/judo_tr_h_b.png" alt="">
+  </div>
+  <img class="logo animate absolute-center" src="/img/sf.png" alt="">
+</div>
+<div style="height:100vh;"></div>
