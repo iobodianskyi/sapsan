@@ -77,8 +77,7 @@ header .menu-item img {
   margin: 0 15px 0 21px;
 }
 
-.no-select,
-img {
+.no-select, img {
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -102,7 +101,11 @@ img {
 }
 
 .main-title {
+  font-family: 'Montserrat', sans-serif;
   font-size: 70px;
+  font-weight: bold;
+  text-shadow: 1px 2px 5px #333232;
+  letter-spacing: 5px;
 }
 
 .main-description {
@@ -111,6 +114,12 @@ img {
   line-height: 23px;
   width: 600px;
   text-align: justify;
+}
+
+.main-img {
+  z-index: 3;
+  width: 68%;
+  top: 57%;
 }
 
 .logo-eagle {
@@ -214,4 +223,15 @@ img {
 .titles .description {
   line-height: 27px;
   color: #3c4043;
+}
+
+.coach .main-title {
+  margin-top: 65px;
+  font-size: 50px;
+}
+
+.coach .main-img {
+  width: 30%;
+  top: 52%;
+  left: 73%;
 }
