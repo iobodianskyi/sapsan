@@ -232,6 +232,11 @@ header .menu-item img {
   font-size: 50px;
 }
 
+.coach .main-line {
+  padding: 50px;
+  font-size: 20px;
+}
+
 .coach .main-img {
   width: 30%;
   top: 52%;
