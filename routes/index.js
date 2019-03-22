@@ -12,6 +12,11 @@
     res.render('coach', { title: 'Таранець Дмитро - тренер СК Сапсан' });
   });
 
+  // GET sportsmen page
+  router.get('/sportsmen', function (req, res) {
+    res.render('sportsmen', { title: 'Спортсмени клубу СК Сапсан' });
+  });
+
   // GET about page.
   router.get('/about', function (req, res) {
     res.render('about', { title: 'Про клуб Сапсан' });
