@@ -35,48 +35,6 @@ a, a:hover {
   transform: translateX(-50%);
 }
 
-header {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12);
-  z-index: 9999;
-  background-color: #fb0;
-}
-
-header, footer {
-  height: 64px;
-}
-
-footer {
-  background: #fff;
-}
-
-header .menu-item {
-  display: inline-block;
-  margin: 21px;
-  color: #5f6368;
-  font-size: 17px;
-}
-
-header .menu-item:hover {
-  color: #000;
-}
-
-header .menu-item.menu-logo {
-  margin: 0;
-  font-weight: bold;
-  color: #000;
-}
-
-header .menu-item img {
-  width: 40px;
-  height: 40px;
-  margin: 0 15px 0 21px;
-}
-
 .no-select, img {
   -webkit-user-select: none;
   -moz-user-select: -moz-none;
@@ -85,19 +43,39 @@ header .menu-item img {
   user-select: none;
 }
 
+button {
+  outline: none !important;
+}
+
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+  background-color: #fb0;
+}
+
+.navbar .navbar-collapse .nav-item {
+  padding-left: 15px;
+}
+
+
+footer {
+  height: 64px;
+  background: #fff;
+}
+
+.navbar img {
+  width: 45px;
+  height: 45px;
+  margin: 5px 25px 5px 15px;
+}
+
 #main {
   height: 90vh;
   margin-top: 64px;
   background-color: #fb0;
   color: #3c4043;
-}
-
-.logo {
-  width: 80px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  -webkit-box-shadow: 0 4px 9px #c1c4cc;
-  box-shadow: 0 4px 9px #c1c4cc;
 }
 
 .main-title {
@@ -120,11 +98,6 @@ header .menu-item img {
   z-index: 3;
   width: 68%;
   top: 57%;
-}
-
-.logo-eagle {
-  top: 100%;
-  width: 64%;
 }
 
 .main-line {
