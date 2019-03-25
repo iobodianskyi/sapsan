@@ -1,378 +1,89 @@
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="/js/images-grid.js"></script>
-<link rel="stylesheet"
-      href="/styles/images-grid.css">
-
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,900"
-      rel="stylesheet">
-<style>
-  body {
-    font-family: "Google Sans", Arial, sans-serif;
-    /* background-color: #fb0; */
-  }
-
-  a,
-  a:hover {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  .relative {
-    position: relative;
-  }
-
-  .absolute {
-    position: absolute;
-  }
-
-  .absolute-center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-  }
-
-  .vertical-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .horizontal-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  header {
-    visibility: hidden;
-    position: static;
-    left: 0;
-    right: 0;
-    top: 0;
-    -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
-    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.12), inset 0 -1px 0 0 #dadce0;
-    z-index: 9999;
-  }
-
-  header,
-  footer {
-    height: 64px;
-    background: #fff;
-  }
-
-  header .menu-item {
-    display: inline-block;
-    margin: 21px;
-    color: #5f6368;
-    font-size: 14px;
-  }
-
-  header .menu-item:hover {
-    color: #000;
-  }
-
-  header .menu-item.menu-logo {
-    margin: 0;
-    font-weight: bold;
-    color: #000;
-  }
-
-  header .menu-item img {
-    width: 40px;
-    height: 40px;
-    margin: 0 15px 0 21px;
-  }
-
-  #main {
-    height: 90vh;
-    background-color: #fb0;
-    color: #3c4043;
-  }
-
-  .logo {
-    width: 80px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    -webkit-box-shadow: 0 4px 9px #c1c4cc;
-    box-shadow: 0 4px 9px #c1c4cc;
-  }
-
-  .main-title {
-    top: 3%;
-    font-size: 70px;
-    z-index: 4;
-  }
-
-  .main-description {
-    top: 40%;
-    font-size: 18px;
-    line-height: 23px;
-    width: 600px;
-    text-align: justify;
-  }
-
-  .logo-eagle {
-    top: 100%;
-    width: 64%;
-  }
-
-  .main-line {
-    position: absolute;
-    top: 36%;
-    width: 100%;
-    height: 286px;
-    background: #234099;
-    z-index: 1;
-  }
-
-  .left-img {
-    left: 40px;
-  }
-
-  .right-img {
-    right: 40px;
-    transform: scale(-1, 1);
-  }
-
-  .left-img,
-  .right-img {
-    width: 130px;
-    top: 258px;
-    opacity: 0.9;
-    z-index: 2;
-  }
-
-  .social-links-container {
-    position: absolute;
-    bottom: 60px;
-  }
-
-  .social-links {
-    width: 30px;
-  }
-
-  .link-arrow {
-    display: inline-block;
-    height: 58px;
-    width: 58px;
-    margin: 15px;
-    border-radius: 50%;
-    background: #fff;
-    -webkit-box-shadow: 0 4px 8px #dadce0;
-    box-shadow: 0 4px 8px #dadce0;
-  }
-
-  #news .news-row {
-    margin: 50px 0;
-    padding: 60px 0;
-  }
-
-  #news .news-row .col-md-6 {
-    /* padding: 40px; */
-  }
-
-  #news .news-row:nth-child(odd) .col-md-6:first-child {
-    padding-left: 50px;
-  }
-
-  #news .news-row:nth-child(even) {
-    background: #f8f9fa;
-  }
-
-  #news .news-row:nth-child(even) .col-md-6:first-child {
-    padding: 50px;
-    padding-left: 0;
-  }
-
-  #news .news-row:nth-child(even) .col-md-6:last-child {
-    padding: 50px;
-    /* background: #444 */
-  }
-
-  #news .news-row:nth-child(even) .col-md-6:last-child .titles {
-    width: 100%;
-  }
-
-  #news .news-row .col-md-6:nth-child(odd) {
-    padding-right: 20px;
-  }
-
-  .titles {
-    width: 100%;
-  }
-
-  .titles .img img {
-    width: 72px;
-    height: auto;
-  }
-
-  .titles .title {
-    margin: 20px 0;
-  }
-
-  .titles .description {
-    line-height: 27px;
-    color: #3c4043;
-  }
-</style>
-
-<section style="background-color: #fb0;">
-  <header>
-    <a href="/"
-       class="menu-item menu-logo">
-      <img src="/img/logo-clear-copy.png" />
-      <span class="">СК САПСАН</span>
-    </a>
-    <a href="/"
-       class="menu-item">Головна</a>
-    <a href="/"
-       class="menu-item">Тренер</a>
-    <a href="/"
-       class="menu-item">Фото</a>
-    <a href="/"
-       class="menu-item">Контакти</a>
-  </header>
-</section>
-
-<section id="main"
-         class="relative">
-  <div class="row">
-    <div class="col-md-9">
-        <img class="team-img absolute-center"
-        style="z-index: 3; width: 68%;top: 57%;"
-        src="/img/full/14.png">
-   <div class="main-title text-center">
-     <div class="row">
-       <div class="col-md-6">
-         <div class="text-center"
-              style="letter-spacing: 5px;">
-           <b style="font-family: 'Montserrat', sans-serif;text-shadow: 1px 2px 5px #333232;">СК
-             САПСАН</b>
-         </div>
-       </div>
-       <div class="col-md-6">
-         <div class="main-description"
-              style="font-family: 'Montserrat', sans-serif;">
-           Спортивний клуб "САПСАН" створений з метою сприяння розвитку рукопашного бою та східних
-           видів
-           двобою у Чечельнику, Вінницької області
-         </div>
-       </div>
-     </div>
-     <img class="logo"
-          src="/img/logo-clear-copy.png"
-          alt=""
-          hidden>
-   </div>
-   <img class="absolute-center"
-        hidden
-        style="z-index: 2; width: 95%; top: 57%;"
-        src="/img/e3.png">
-   <svg version="1.1"
-        hidden
-        class="team-img absolute-center"
-        id="elips"
-        xmlns="http://www.w3.org/2000/svg"
-        x="0px"
-        y="0px"
-        viewBox="78 -77 635 635"
-        xml:space="preserve"
-        style="    width: 48%;
-        fill: none;
-        display: inline-block;
-        position: relative;
-        stroke: #34373c;
-        top: 55%;
-    ">
-     <style type="text/css">
-       .st0 {
-         stroke-width: 40;
-         stroke-miterlimit: 10;
-       }
-     </style>
-     <path class="st0 elips animated"
-           d="M103,240.5A292.5,292.5 0,1,1 688,240.5A292.5,292.5 0,1,1 103,240.5"
-           style="stroke-dasharray: 1839, 1841; stroke-dashoffset: 0;"></path>
-   </svg>
-   <div class="main-line"></div>
-   <img class="left-img absolute"
-        src="/img/judo_tr_bl_yel.png">
-   <img class="right-img absolute"
-        src="/img/judo_tr_bl_yel.png">
-   <div class="social-links-container horizontal-center"
-        hidden>
-     <a href="https://www.facebook.com/groups/902511099822989/"
-        target="_blank"
-        class="link-arrow relative">
-       <img class="social-links absolute-center"
-            src="/img/social/fb-color.svg">
-     </a>
-     <a href="/"
-        target="_blank"
-        class="link-arrow relative">
-       <img class="social-links absolute-center"
-            src="/img/social/insta-color.svg">
-     </a>
-     <a href="/"
-        target="_blank"
-        class="link-arrow relative">
-       <img class="social-links absolute-center"
-            src="/img/social/yout-color.svg">
-     </a>
-   </div>
+<section id="main" class="relative">
+  <img class="main-img absolute-center" src="/img/full/14.png">
+  <div class="text-center container-fluid">
+    <div class="row">
+      <div class="col-12 col-lg-6">
+        <div class="main-title text-center">СК САПСАН</div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="main-description ml-auto mr-auto">
+          Спортивний клуб "САПСАН" створений з метою сприяння розвитку рукопашного бою та східних видів
+          двобою у Чечельнику, Вінницької області
+        </div>
+      </div>
     </div>
-    <div style=""></div>
   </div>
-  
-  <!-- <img class="logo-eagle absolute-center" src="/img/egr.png" /> -->
+  <div class="main-line">
+    <img class="left-img vertical-center d-none d-xl-block" src="/img/judo_tr_bl_yel.png">
+    <img class="right-img vertical-center d-none d-xl-block" src="/img/judo_tr_bl_yel.png">
+  </div>
 </section>
 
 <section id="news">
-  <div class="">
+  <div class="container-fluid">
     <div class="row news-row">
-      <div class="col-md-1"></div>
-      <div class="col-md-4">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="titles">
+          <div class="img">
+            <img src="/img/mma-logo.png" />
+          </div>
+          <div class="title">
+            <h2>Чемпіонат України зі змішаних єдиноборств ММА серед дітей та юнаків</h2>
+          </div>
+          <div class="description"></div>
+        </div>
+      </div>
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-5">
+        <iframe width="100%" height="350px" src="https://www.youtube.com/embed/0JuY2lDMO8Y" frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="row news-row">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-4">
         <div class="titles">
           <div class="img">
             <img src="/img/champ.png" />
           </div>
           <div class="title">
-            <h2>Вітаємо переможця!</h2>
           </div>
           <div class="description">
             <p>
-              З 6 по 10 червня в смт. Затока, Одеської області відбувся міжнародний турнір з боксу
-              <b>"Олімпійські надії"</b> в якому приймали участь спортсмени з Молдови, Болгарії та
-              України.
+              Сьогодні, управління фізичної культури та спорту Вінницької ОДА, за підсумками обласного рейтингу 2018
+              року, нагородили Наш Клуб "Сапсан" дипломом за зайняте ІІІ місце серед спортивних клубів з неолімпійських
+              видів спорту.
             </p>
+
             <p>
-              Спортсмен нашого клубу <b>Чернега Артем</b>, в складі збірної Вінницької області з
-              боксу також
-              взяв участь та достойно виступив. У ваговій категорії до 32 кг виграв всі поєдинки та
-              зайняв І місце 🏅🏆
+              Нагорода, в яку кожен спортсмен зробив свій власний внесок, беручи участь та перемагаючи в чемпіонатах
+              області та України з #Рукопашногобою, #Ушу, #Кікбоксингу та #Бойовогосамбо.
+            </p>
+
+            <p>
+              За можливість здійснювати поїздки Дякуємо Чернезі Борису Федоровичу, Чечельницькій РДА та батькам
+              спортсменів, без довіри та допомоги яких, не можна було б і мріяти про якісь результати.
             </p>
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-5">
         <div class="img-galary">
-          <div id="1"
-               class="gallery"></div>
+          <div id="1" class="gallery"></div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
     </div>
     <div class="row news-row">
-      <div class="col-md-1"></div>
-      <div class="col-md-4">
-        <div id="2"
-             class="gallery"></div>
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div id="2" class="gallery"></div>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-5">
         <div class="titles">
           <div class="img">
             <img src="/img/fit.png" />
@@ -411,11 +122,11 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
     </div>
 
     <div class="row news-row">
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
       <div class="col-md-10">
         <div class="titles">
           <div class="img">
@@ -425,8 +136,7 @@
             <h2>Чемпіонат України серед юнаків та юніорів</h2>
           </div>
           <div class="col-md-6 float-right">
-            <div id="3"
-                 class="gallery"></div>
+            <div id="3" class="gallery"></div>
           </div>
           <div class="description">
             <p>
@@ -478,16 +188,16 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
     </div>
+
     <div class="row news-row">
-      <div class="col-md-1"></div>
-      <div class="col-md-4">
-        <div id="4"
-             class="gallery"></div>
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div id="4" class="gallery"></div>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-5">
         <div class="titles">
           <div class="img">
             <img src="/img/df.png" />
@@ -504,10 +214,11 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
     </div>
+
     <div class="row news-row">
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
       <div class="col-md-10">
         <div class="titles">
           <div class="img">
@@ -517,8 +228,7 @@
             <h2>Результати чемпіонату</h2>
           </div>
           <div class="col-md-6 float-right">
-            <div id="5"
-                 class="gallery"></div>
+            <div id="5" class="gallery"></div>
           </div>
           <div class="description">
             В суботу, 21 квітня, відбувся чемпіонат Вінницької області з рукопашного бою. Даний
@@ -556,14 +266,14 @@
         </div>
       </div>
     </div>
+
     <div class="row news-row">
-      <div class="col-md-1"></div>
-      <div class="col-md-4">
-        <div id="6"
-             class="gallery"></div>
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div id="6" class="gallery"></div>
       </div>
-      <div class="col-md-1"></div>
-      <div class="col-md-5">
+      <div class="d-none d-lg-block col-1"></div>
+      <div class="col-12 col-md-6 col-lg-5">
         <div class="titles">
           <div class="img">
             <img src="/img/comp.png" />
@@ -586,18 +296,8 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="d-none d-lg-block col-1"></div>
     </div>
 
   </div>
-</section>
-
-<section id="footer">
-
-  <footer>
-    <div class="container">
-      <hr>
-      Спотривний клуб "САПСАН" - Чечельник, 2018
-    </div>
-  </footer>
 </section>
