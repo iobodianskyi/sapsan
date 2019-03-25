@@ -1,5 +1,5 @@
 body {
-  font-family: "Google Sans", Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .relative {
@@ -15,6 +15,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+}
+
+.vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .no-select, img {
@@ -47,19 +53,22 @@ button {
   padding-left: 15px;
 }
 
-footer {
-  height: 64px;
-  background: #fff;
-}
-
 .navbar img {
   width: 45px;
   height: 45px;
   margin: 5px 25px 5px 15px;
 }
 
+.navbar .navbar-brand {
+  font-weight: 600;
+}
+
+.navbar .navbar-toggler {
+  margin-right: 15px;
+}
+
 #main {
-  height: 90vh;
+  height: calc(100vh - 65px);
   margin-top: 64px;
   background-color: #fb0;
   color: #3c4043;
@@ -67,23 +76,23 @@ footer {
 
 .main-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: 70px;
+  font-size: 45px;
   font-weight: bold;
   text-shadow: 1px 2px 5px #333232;
   letter-spacing: 5px;
 }
 
 .main-description {
+  width: 90%;
   margin-top: 20px;
   font-size: 18px;
   line-height: 23px;
-  width: 600px;
   text-align: justify;
 }
 
 .main-img {
   z-index: 3;
-  width: 68%;
+  width: 95%;
   top: 57%;
 }
 
@@ -91,7 +100,7 @@ footer {
   position: absolute;
   top: 36%;
   width: 100%;
-  height: 286px;
+  height: 43%;
   background: #234099;
   color: #fff;
   z-index: 1;
@@ -103,12 +112,11 @@ footer {
 
 .right-img {
   right: 40px;
-  transform: scale(-1, 1);
+  transform: scale(-1, 1) translateY(-50%);
 }
 
 .left-img, .right-img {
   width: 130px;
-  top: 258px;
   opacity: 0.9;
   z-index: 2;
 }
@@ -118,7 +126,8 @@ footer {
 }
 
 #news .news-row {
-  margin: 50px 0;
+  margin-top: 50px;
+  margin-bottom: 50px;
   padding: 60px 0;
 }
 
@@ -165,8 +174,7 @@ footer {
   color: #3c4043;
 }
 
-.coach .main-title,
-.about .main-title {
+.coach .main-title, .about .main-title {
   margin-top: 65px;
   font-size: 50px;
 }
@@ -183,7 +191,7 @@ footer {
 }
 
 .about .main-title {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .about .main-description {
@@ -200,4 +208,35 @@ footer {
 
 .about-description {
   padding: 50px 200px;
+}
+
+footer {
+  height: 64px;
+  background: #fff;
+}
+
+@media (min-width: 576px) {
+  .main-title {
+    font-size: 55px;
+  }
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {
+  .main-title {
+    font-size: 60px;
+  }
+  .main-img {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-title {
+    font-size: 70px;
+  }
+  .main-img {
+    width: 65%;
+  }
 }
