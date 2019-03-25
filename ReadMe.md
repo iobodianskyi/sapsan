@@ -29,4 +29,4 @@ Then run the following commands in the directory:
     npm start
 
 
-Navigate to [http://localhost:5002](http://localhost:5002)
+Navigate to [http://localhost:7701](http://localhost:7701)
