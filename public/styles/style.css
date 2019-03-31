@@ -210,6 +210,15 @@ button {
   padding: 50px 200px;
 }
 
+.location {
+  width: 100%;
+  height: 200px;
+  background: url(/img/location.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 footer {
   height: 64px;
   background: #fff;
@@ -219,9 +228,17 @@ footer {
   .main-title {
     font-size: 55px;
   }
+
+  .location {
+    height: 350px;
+  }
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+  .location {
+    height: 400px;
+  }
+}
 
 @media (min-width: 992px) {
   .main-title {
@@ -229,6 +246,10 @@ footer {
   }
   .main-img {
     width: 85%;
+  }
+
+  .location {
+    height: 500px;
   }
 }
 
