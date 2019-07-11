@@ -93,19 +93,15 @@ button {
 }
 
 .main-img {
-  z-index: 3;
   width: 95%;
-  top: 57%;
 }
 
 .main-line {
-  position: absolute;
-  top: 36%;
   width: 100%;
-  height: 43%;
+  height: 275px;
+  margin-top: 125px;
   background: #234099;
   color: #fff;
-  z-index: 1;
 }
 
 .left-img {
@@ -188,9 +184,10 @@ button {
 }
 
 .coach .main-img {
-  width: 30%;
-  top: 52%;
-  left: 73%;
+  position: absolute;
+  width: 27%;
+  bottom: 0;
+  right: 10%;
 }
 
 #main.about {
