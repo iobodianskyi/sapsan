@@ -69,6 +69,27 @@ button {
   margin-right: 15px;
 }
 
+.navbar .nav-social-logo {
+  width: 35px;
+  height: 35px;
+  border-radius: 9px;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.navbar .nav-social-logo:hover {
+  opacity: 1;
+}
+
+.navbar .nav-social-logo.instagram {
+  margin-right: 10px;
+  background-image: url(/img/social/instagram-logo.png);
+}
+
+.navbar .nav-social-logo.facebook {
+  background-image: url(/img/social/facebook-logo.jpg);
+}
+
 #main {
   min-height: calc(100vh - 65px);
   margin-top: 64px;
