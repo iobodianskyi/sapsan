@@ -70,7 +70,7 @@ button {
 }
 
 #main {
-  height: calc(100vh - 65px);
+  min-height: calc(100vh - 65px);
   margin-top: 64px;
   background-color: #fb0;
   color: #3c4043;
@@ -110,7 +110,7 @@ button {
 
 .main-line {
   width: 100%;
-  height: 275px;
+  min-height: 275px;
   background: #234099;
   color: #fff;
 }
@@ -192,7 +192,8 @@ button {
   color: #3c4043;
 }
 
-.coach .main-line {
+.coach .main-line,
+.coach .option-line {
   padding: 50px;
   font-size: 20px;
 }
@@ -202,6 +203,10 @@ button {
   width: 27%;
   bottom: 0;
   right: 10%;
+}
+
+.coach .desc-img {
+  border: 3px solid #fff;
 }
 
 .about .main-line {
