@@ -69,9 +69,14 @@ button {
   margin-right: 15px;
 }
 
+.navbar-nav.navbar-light {
+  flex-direction: row;
+}
+
 .navbar .nav-social-logo {
   width: 35px;
   height: 35px;
+  margin-bottom: 10px;
   border-radius: 9px;
   background-size: contain;
   opacity: 0.5;
@@ -83,6 +88,7 @@ button {
 
 .navbar .nav-social-logo.instagram {
   margin-right: 10px;
+  margin-left: 15px;
   background-image: url(/img/social/instagram-logo.png);
 }
 
@@ -266,6 +272,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+  .navbar .nav-social-logo {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+
   .head-cols {
     min-height: 220px;
   }
