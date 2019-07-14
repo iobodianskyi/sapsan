@@ -127,9 +127,12 @@ button {
 
 .main-img {
   width: 95%;
+  max-width: 1000px;
 }
 
 .main-line {
+  display: flex;
+  align-items: center;
   width: 100%;
   min-height: 275px;
   background: #234099;
@@ -222,6 +225,7 @@ button {
 .coach .main-img {
   position: absolute;
   width: 27%;
+  max-width: 370px;
   bottom: 0;
   right: 10%;
 }
