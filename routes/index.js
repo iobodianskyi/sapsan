@@ -19,7 +19,7 @@
 
   // GET about page.
   router.get('/about', function (req, res) {
-    res.render('about', { title: 'Про клуб Сапсан' });
+    res.render('about', { title: 'Про клуб СК Сапсан' });
   });
 
 
