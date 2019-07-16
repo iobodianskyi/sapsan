@@ -16,15 +16,21 @@
   };
 
   options.images = [
+    '/img/news/58570589_862916010725967_11025125214257152_n.jpg',
+    '/img/news/58711582_8629199280629219328_n.jpg'
+  ],
+    $('#0').imagesGrid(options);
+
+  options.images = [
     '/img/news/332.jpg',
     '/img/news/233.jpg'
   ],
-  $('#1').imagesGrid(options);
+    $('#1').imagesGrid(options);
 
   options.images = [
     '/img/news/2.jpg'
   ],
-  $('#2').imagesGrid(options);
+    $('#2').imagesGrid(options);
 
   options.images = [
     '/img/news/3.jpg',
@@ -34,7 +40,7 @@
     '/img/news/7.jpg',
     '/img/news/6.jpg'
   ],
-  $('#3').imagesGrid(options);
+    $('#3').imagesGrid(options);
 
   options.images = [
     '/img/news/11.jpg',
@@ -43,7 +49,7 @@
     '/img/news/14.jpg'
   ],
 
-  $('#4').imagesGrid(options);
+    $('#4').imagesGrid(options);
 
 
   options.images = [
@@ -51,7 +57,7 @@
     '/img/news/233.jpg'
   ],
 
-  $('#5').imagesGrid(options);
+    $('#5').imagesGrid(options);
 
 
   options.images = [
@@ -59,6 +65,6 @@
     '/img/news/233.jpg'
   ],
 
-  $('#6').imagesGrid(options);
+    $('#6').imagesGrid(options);
 
 })();
