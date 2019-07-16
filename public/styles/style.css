@@ -240,6 +240,20 @@ button {
   border: 3px solid #fff;
 }
 
+.sportsmen .sportsmen-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sportsmen .sportsmen-img {
+  width: 70%;
+  margin-bottom: 20px;
+}
+
 .about .main-line {
   position: static;
   height: initial;
