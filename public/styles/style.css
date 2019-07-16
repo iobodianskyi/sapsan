@@ -279,6 +279,15 @@ footer {
   background: #fff;
 }
 
+.imgs-grid-modal {
+  top: 65px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+.imgs-grid-modal .modal-indicator ul li {
+  margin-left: 5px !important;
+}
+
 @media (min-width: 576px) {
   .location {
     height: 350px;
