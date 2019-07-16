@@ -324,6 +324,7 @@ footer {
     max-width: 370px;
     bottom: 0;
     right: 10%;
+    margin-bottom: 0;
   }
 
   .location {
