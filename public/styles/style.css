@@ -222,6 +222,10 @@ button {
   color: #3c4043;
 }
 
+.coach .main-line {
+  flex-direction: column;
+}
+
 .coach .main-line,
 .coach .option-line {
   padding: 50px;
@@ -229,11 +233,9 @@ button {
 }
 
 .coach .main-img {
-  position: absolute;
-  width: 27%;
+  width: 65%;
   max-width: 370px;
-  bottom: 0;
-  right: 10%;
+  margin-bottom: 40px;
 }
 
 .coach .desc-img {
@@ -314,6 +316,14 @@ footer {
   .home .main-description {
     margin-top: 20px;
     margin-bottom: 20px;
+  }
+
+  .coach .main-img {
+    position: absolute;
+    width: 27%;
+    max-width: 370px;
+    bottom: 0;
+    right: 10%;
   }
 
   .location {
