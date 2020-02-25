@@ -1,6 +1,6 @@
 # Sapsan
 
-**Sapsan** is a lending page for sport club located in Chechelnik, Vinnitca Oblast
+**Sapsan** is a lending page for sport club located in Chechelnik, Vinnytsia Oblast
 
 ## Getting Started
 
